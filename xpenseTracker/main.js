@@ -121,7 +121,7 @@ $('#submit-balance').on('click', function(){
       footer: '<a href="">Why do I have this issue?</a>'
     })
   }else{
-    addExpenseDetails()
+    addedBalanceDetails()
   }
 })
 $('#submit-expense').on('click', addExpenseDetails)
