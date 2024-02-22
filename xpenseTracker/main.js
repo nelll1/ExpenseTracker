@@ -20,8 +20,6 @@ function addedBalanceDetails(){
   const description = document.getElementById('description').value;
   const moneyValue =  document.getElementById('money-input').value //getting value of money input
 
-  
-
   moneyBalance += parseFloat(moneyValue); //adding the moneyValue to moneyBalance
   $('#balance').text(moneyBalance)
 
@@ -112,18 +110,7 @@ function addExpenseDetails(){
 
 
 //submit button
-$('#submit-balance').on('click', function(){
-  if($('#money-input').val() == ""){
-    Swal.fire({
-      icon: 'info',
-      title: 'Oops...',
-      text: 'Enter a value',
-      footer: '<a href="">Why do I have this issue?</a>'
-    })
-  }else{
-    addedBalanceDetails()
-  }
-})
+$('#submit-balance').on('click', addedBalanceDetails)
 $('#submit-expense').on('click', addExpenseDetails)
 
 
